@@ -1,0 +1,70 @@
+
+
+
+
+
+
+@import 'https://fonts.googleapis.com/css?family=Libre+Franklin:400,700';
+
+
+
+html, body {
+	background: #FFFFFF;
+	font-family: 'Libre Franklin', sans-serif;
+}
+
+.containement {
+	background: #B9D9EB;
+	width: 900px;
+	height: 450px;
+	margin: 5% auto;
+	border-radius: 8px;
+	position: relative;
+}
+
+.map {
+	width: 45%;
+	float: left;
+}
+
+.contact-form {
+	width: 53%;
+	margin-left: 2%;
+	float: left;
+}
+
+.title {
+	font-size: 2.5em;
+	font-family: 'Libre Franklin', sans-serif;
+	font-weight: 700;
+	color:#242424;
+	margin: 5% 8%;
+}
+
+.subtitle {
+	font-size: 1.2em;
+	font-weight: 400;
+	margin: 0 4% 5% 8%;
+}
+
+input,
+textarea {
+	width: 330px;
+	padding: 3%;
+	margin: 2% 8%;
+	color: #242424;
+	border: 1px solid #B7B7B7;
+	&::placeholder {
+		color: #242424;
+	}
+}
+
+.btn-send {
+	background:  #A383C9;
+	width: 180px;
+	height: 60px;
+	color: #F8F8F8;
+	font-weight: 700;
+	margin: 2% 8%;
+	border: none;
+}

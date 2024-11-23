@@ -1,0 +1,352 @@
+<!doctype html>
+<html class="no-js" lang="zxx">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title> Medical  </title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" type="image/x-icon" href={{ url_for('static', filename='assets/img/favicon.ico' ) }}>
+
+    <!-- CSS here -->
+    <link rel="stylesheet" href={{ url_for('static', filename='assets/css/bootstrap.min.css' ) }}>
+    <link rel="stylesheet" href={{ url_for('static', filename='assets/css/owl.carousel.min.css' ) }}>
+    <link rel="stylesheet" href={{ url_for('static', filename='assets/css/slicknav.css' ) }}>
+    <link rel="stylesheet" href={{ url_for('static', filename='assets/css/animate.min.css' ) }}>
+    <link rel="stylesheet" href={{ url_for('static', filename='assets/css/magnific-popup.css' ) }}>
+    <link rel="stylesheet" href={{ url_for('static', filename='assets/css/fontawesome-all.min.css' ) }}>
+    <link rel="stylesheet" href={{ url_for('static', filename='assets/css/themify-icons.css' ) }}>
+    <link rel="stylesheet" href={{ url_for('static', filename='assets/css/themify-icons.css' ) }}>
+    <link rel="stylesheet" href={{ url_for('static', filename='assets/css/slick.css' ) }}>
+    <link rel="stylesheet" href={{ url_for('static', filename='assets/css/nice-select.css' ) }}>
+    <link rel="stylesheet" href={{ url_for('static', filename='assets/css/style.css' ) }}>
+    <link rel="stylesheet" href={{ url_for('static', filename='assets/css/responsive.css' ) }}>
+    <link rel="stylesheet" href={{ url_for('static', filename='assets/css/form.css' ) }}>
+</head>
+<body>
+    <!--? Preloader Start -->
+    <div id="preloader-active">
+        <div class="preloader d-flex align-items-center justify-content-center">
+            <div class="preloader-inner position-relative">
+                <div class="preloader-circle"></div>
+                <div class="preloader-img pere-text">
+                    <img src={{ url_for('static', filename='assets/img/logo/loder.png' ) }}>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Preloader Start -->
+    <header>
+        <!--? Header Start -->
+        <div class="header-area">
+            <div class="main-header header-sticky">
+                <div class="container-fluid">
+                    <div class="row align-items-center">
+                        <!-- Logo -->
+                        <div class="col-xl-2 col-lg-2 col-md-1">
+                            <div class="logo">
+                                <a href="/"><img src={{ url_for('static', filename='assets/img/logo/logo.png' ) }}></a>
+                            </div>
+                        </div>
+                        <div class="col-xl-10 col-lg-10 col-md-10">
+                            <div class="menu-main d-flex align-items-center justify-content-end">
+                                <!-- Main-menu -->
+                                <div class="main-menu f-right d-none d-lg-block">
+                                    <nav>
+                                        <ul id="navigation">
+                                            <li><a href="/">Home</a></li>
+                                            <li><a href="/about">About</a></li>
+                                            <li><a href="/predictor">Predictors</a>
+                                                <ul class="submenu">
+                                                    <li><a href="/heart">Cardiology</a></li>
+                                                    <li><a href="/pneumonia">Respiratory</a></li>
+                                                    <li><a href="/kidney">Renal</a></li>
+                                                    <li><a href="/eye">Retinal</a></li>
+                                                    <li><a href="/liver">Hepatical</a></li>
+                                                </ul>
+                                            </li>
+                                            
+                                            <li><a href="/contact">Contact</a></li>
+                                        </ul>
+                                    </nav>
+                                </div>
+                                <div class="header-right-btn f-right d-none d-lg-block ml-30">
+                                    <a href="/predictor" class="btn header-btn">Predict</a>
+                                </div>
+                            </div>
+                        </div>   
+                        <!-- Mobile Menu -->
+                        <div class="col-12">
+                            <div class="mobile_menu d-block d-lg-none"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Header End -->
+    </header>
+    <main>
+        <!--? Hero Start -->
+        <div class="slider-area2">
+            <div class="slider-height2 d-flex align-items-center">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xl-12">
+                            <div class="hero-cap hero-cap2 text-center">
+                                <h2>Renal Predictor</h2>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <section>
+            <div class="container">
+                <div class="content">
+                  <form action="/kidney" method="POST">
+                    <div class="user-details">
+                      <div class="input-box">
+                        <span class="details">Full Name</span>
+                        <input type="text" placeholder="Enter your name" name="name" required>
+                      </div>
+                      <div class="input-box">
+                        <span class="details">Age</span><br>
+                        <input type="text" placeholder="Enter your age" name="age" required>
+                      </div>
+                      <div class="input-box">
+                        <!--<span class="details">Gender</span><br>
+                        <input type="text" placeholder="Enter your email" required>-->
+                       
+                            <span class="gender-details">Gender</span><br>
+                            <label for="male"><input type="radio" id="male" name="sex" value="male"> Male</label>
+                            <label for="female"><input type="radio" id="female" name="sex" value="female"> Female</label>
+                            <label for="other"><input type="radio" id="other" name="sex" value="other"> Other</label>
+                        
+                        
+                      </div>
+                      <div class="input-box">
+                        <span class="details">Blood Pressure</span><br>
+                        <input type="text" name="blood_pressure" placeholder="Enter your BP" required>
+                      </div>
+                      <div class="input-box">
+                        <span class="details">Specific Gravity</span>
+                        <input type="text" name="specific_gravity" placeholder="Enter your specific Gravity " required>
+                      </div>
+                      <div class="input-box">
+                        <span class="details">Albumin</span>
+                        <input type="text" name="albumin" placeholder="Confirm your Albumin" required>
+                      </div>
+                      <div class="input-box">
+                        <span class="details">Sugar</span><br>
+                        <input type="text" name="sugar" placeholder="Enter your Sugar" required>
+                      </div>
+                      <div class="input-box">
+                        <span class="details">Red Blood Cells</span>
+                        <input type="text" name="red_blood_cells" placeholder="Enter your RBCs" required>
+                      </div>
+                      <div class="input-box">
+                        <span class="details">Pus Cell</span>
+                        <input type="text" name="pus_cell" placeholder="Enter your Pus cell" required>
+                      </div>
+                      <div class="input-box">
+                        <span class="details">Pus Cell Clumps</span><br>
+                        <input type="text" name="pus_cell_clumps" placeholder="Enter your Pus Cell Clumps" required>
+                      </div>
+                      <div class="input-box">
+                        <span class="gender-details">Bacteria</span>
+                        <label for="male"><input type="radio" id="yes" name="bacteria" value="1"> Present</label>
+                        <label for="female"><input type="radio" id="no" name="bacteria" value="0"> Not Present</label>
+                      </div>
+                      <div class="input-box">
+                        <span class="details">Blood Glucose</span>
+                        <input type="text" name="blood_glucose" placeholder="Enter your Blood Glucose" required>
+                      </div>
+                      <div class="input-box">
+                        <span class="details">Urea</span><br>
+                        <input type="text" name="urea" placeholder="Enter urea" required>
+                      </div>
+                      <div class="input-box">
+                        <span class="details">Creatinine</span>
+                        <input type="text" name="creatinine" placeholder="Enter Creatinine" required>
+                      </div>
+                      <div class="input-box">
+                        <span class="details">Sodium</span><br>
+                        <input type="text" name="sodium" placeholder="Enter Sodium" >
+                      </div>
+                      <div class="input-box">
+                        <span class="details">Potassium</span><br>
+                        <input type="text" name="potassium" placeholder="Enter Potassium" >
+                      </div>
+                      <div class="input-box">
+                        <span class="details">Haemoglobin</span><br>
+                        <input type="text" name="haemoglobin" placeholder="Enter Haemoglobin" required >
+                      </div>
+                      <div class="input-box">
+                        <span class="details">Packet cell Vol</span><br>
+                        <input type="text" name="packet_cell_vol" placeholder="Enter Packet cell Vol" required >
+                      </div>
+
+                      <div class="input-box">
+                        <span class="details">White Blood Cells Count</span><br>
+                        <input type="text" name="white_blood_cells_count" placeholder="Enter WBC" required >
+                      </div>
+                      <div class="input-box">
+                        <span class="details">Red Blood Cell Count</span><br>
+                        <input type="text" name="red_blood_cells_count" placeholder="Enter RBC" required >
+                      </div>
+                      
+                      <div class="input-box">
+                      <span class="gender-details">Hypertension</span><br>
+                      <label for="male"><input type="radio" id="yes" name="hypertension" value="1"> Yes</label>
+                        <label for="female"><input type="radio" id="no" name="hypertension" value="0"> No</label>
+                    </div>
+                    <div class="input-box">
+                        <span class="gender-details">Diabetes Mellitus</span><br>
+                        <label for="male"><input type="radio" id="yes" name="diabetes_mellitus" value="1"> Yes</label>
+                          <label for="female"><input type="radio" id="no" name="diabetes_mellitus" value="0"> No</label>
+                      </div>
+                      <div class="input-box">
+                        <span class="gender-details">Coronary Artery Disease</span><br>
+                        <label for="male"><input type="radio" id="yes" name="coronary_artery_disease" value="1"> Yes</label>
+                          <label for="female"><input type="radio" id="no" name="coronary_artery_disease" value="0"> No</label>
+                      </div>
+                      <div class="input-box">
+                        <span class="gender-details">Apetite</span><br>
+                        <label for="male"><input type="radio" id="yes" name="apetite" value="0"> Good</label>
+                          <label for="female"><input type="radio" id="no" name="apetite" value="1"> Poor</label>
+                      </div>
+                      <div class="input-box">
+                        <span class="gender-details">Pedia Edema</span><br>
+                        <label for="male"><input type="radio" id="yes" name="pedia_edema" value="1"> Yes</label>
+                          <label for="female"><input type="radio" id="no" name="pedia_edema" value="0"> No</label>
+                      </div>
+                      <div class="input-box">
+                        <span class="gender-details">Anaemia</span><br>
+                        <label for="male"><input type="radio" id="yes" name="anaemia" value="1"> Yes</label>
+                          <label for="female"><input type="radio" id="no" name="anaemia" value="0"> No</label>
+                     </div>
+                     </div>
+                    <div class="button">
+                      <input type="submit" value="Predict Now">
+                    </div>
+                  </form>
+                  
+                </div>
+              </div>
+              
+        </section>
+    </main>
+    <footer>
+        <!--? Footer Start-->
+        <div class="footer-area section-bg" style="data-background:=url({{ url_for('static', filename='assets/img/gallery/footer_bg.jpg') }});">
+            <div class="container">
+                <div class="footer-top footer-padding">
+                    <div class="row d-flex justify-content-between">
+                        <div class="col-xl-3 col-lg-3 col-md-4 col-sm-8">
+                            <div class="single-footer-caption mb-50">
+                                <!-- logo -->
+                                <div class="footer-logo">
+                                    <a href="/"><img src={{ url_for('static', filename='assets/img/logo/logo2_footer.png' ) }}></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-lg-4 col-md-6 col-sm-5">
+                            <div class="single-footer-caption mb-50">
+                                <div class="footer-tittle">
+                                    <h4>About Us</h4>
+                                    <div class="footer-pera">
+                                        <p class="info1">Our sustem offers five specialized predictors for a range of crucial physiological systems and organs - cardiovascular, hepatic, renal, ocular, and respiratory. </p>
+                                        <p class="info1">Each predictor is meticulously designed to provide accurate and timely insights, empowering you to take proactive steps towards better health</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-4 col-lg-4 col-md-6 col-sm-8">
+                            <div class="single-footer-caption mb-50">
+                                <div class="footer-number mb-50">
+                                    <h4><span>+91 </span>8396856205</h4>
+                                    <p>Medical_predictor@gmail.com</p>
+                                </div>
+                                <!-- Form -->
+                                <div class="footer-form">
+                                    <div id="mc_embed_signup">
+                                        <form target="_blank" action="https://spondonit.us12.list-manage.com/subscribe/post?u=1462626880ade1ac87bd9c93a&amp;id=92a4423d01" method="get" class="subscribe_form relative mail_part" novalidate="true">
+                                            <input type="email" name="EMAIL" id="newsletter-form-email" placeholder=" Email Address " class="placeholder hide-on-focus" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Your email address'">
+                                            <div class="form-icon">
+                                                <button type="submit" name="submit" id="newsletter-submit" class="email_icon newsletter-submit button-contactForm">
+                                                    Send
+                                                </button>
+                                            </div>
+                                            <div class="mt-10 info"></div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <div class="row d-flex justify-content-between align-items-center">
+                        <div class="col-xl-9 col-lg-8">
+                            <div class="footer-copy-right">
+                                <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+  Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved 
+  <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-lg-4">
+                            <!-- Footer Social -->
+                            <div class="footer-social f-right">
+                                <a href="#"><i class="fab fa-twitter"></i></a>
+                                <a href="https://www.facebook.com/sai4ull"><i class="fab fa-facebook-f"></i></a>
+                                <a href="#"><i class="fas fa-globe"></i></a>
+                                <a href="#"><i class="fab fa-instagram"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Footer End-->
+    </footer>
+    <!-- Scroll Up -->
+    <div id="back-top" >
+        <a title="Go to Top" href="#"> <i class="fas fa-level-up-alt"></i></a>
+    </div>
+
+    <!-- JS here -->
+	
+    <script src={{ url_for('static', filename='./assets/js/vendor/modernizr-3.5.0.min.js' ) }}></script>
+    <!-- Jquery, Popper, Bootstrap -->
+    <script src={{ url_for('static', filename='./assets/js/vendor/jquery-1.12.4.min.js' ) }}></script>
+    <script src={{ url_for('static', filename='./assets/js/popper.min.js' ) }}></script>
+    <script src={{ url_for('static', filename='./assets/js/bootstrap.min.js' ) }}></script>
+    <!-- Jquery Mobile Menu -->
+    <script src={{ url_for('static', filename='./assets/js/jquery.slicknav.min.js' ) }}></script>
+
+    <!-- Jquery Slick , Owl-Carousel Plugins -->
+    <script src={{ url_for('static', filename='./assets/js/owl.carousel.min.js' ) }}></script>
+    <script src={{ url_for('static', filename='./assets/js/slick.min.js' ) }}></script>
+    <!-- One Page, Animated-HeadLin -->
+    <script src={{ url_for('static', filename='./assets/js/wow.min.js' ) }}></script>
+    <script src={{ url_for('static', filename='./assets/js/animated.headline.js' ) }}></script>
+    
+    <!-- Nice-select, sticky -->
+    <script src={{ url_for('static', filename='./assets/js/jquery.nice-select.min.js' ) }}></script>
+    <script src={{ url_for('static', filename='./assets/js/jquery.sticky.js' ) }}></script>
+    <script src={{ url_for('static', filename='./assets/js/jquery.magnific-popup.js' ) }}></script>
+
+    <!-- contact js -->
+    <script src={{ url_for('static', filename='./assets/js/contact.js' ) }}></script>
+    <script src={{ url_for('static', filename='./assets/js/jquery.form.js' ) }}></script>
+    <script src={{ url_for('static', filename='./assets/js/jquery.validate.min.js' ) }}></script>
+    <script src={{ url_for('static', filename='./assets/js/mail-script.js' ) }}></script>
+    <script src={{ url_for('static', filename='./assets/js/jquery.ajaxchimp.min.js' ) }}></script>
+    
+    <!-- Jquery Plugins, main Jquery -->	
+    <script src={{ url_for('static', filename='./assets/js/plugins.js' ) }}></script>
+    <script src={{ url_for('static', filename='./assets/js/main.js' ) }}></script>
+    
+    </body>
+</html>
+    

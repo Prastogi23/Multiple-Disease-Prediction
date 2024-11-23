@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+:root {
+  --main-blue:#89D4CF;
+  --main-purple: #5CA0F2;
+  --main-grey: #ccc;
+  --sub-grey: #d9d9d9;
+}
+.user-details {
+  margin-bottom: 20px;
+  border: 2px solid #ccc; 
+  padding-left: 50px;
+  background:linear-gradient(135deg, var(--main-blue), var(--main-purple));
+  max-width: 700px;
+  border-radius: 12px;
+  margin-left: 240px;
+  max-height: 600px; /* Set a maximum height for the container */
+  overflow-y: auto;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.user-details::-webkit-scrollbar {
+  width: 10px; /* Width of the scrollbar */
+}
+
+.user-details::-webkit-scrollbar-track {
+  background: none; /* Background of the track */
+}
+
+.user-details::-webkit-scrollbar-thumb {
+  background-color:#fff ; /* Color of the scrollbar thumb */
+  border-radius: 5px; /* Radius of the thumb */
+}
+
+.user-details::-webkit-scrollbar-thumb:hover {
+  background-color: #d9d9d9; /* Color of the thumb on hover */
+}
+
+.user-details .input-box {
+  
+  width: calc(50% - 10px); /* Two boxes in one line with a small gap */
+  margin-bottom: 10px;
+  display: inline-block; /* Display the input boxes inline */
+  vertical-align: top; /* Align the input boxes to the top */
+}
+
+.user-details .details {
+  font-weight: bold;
+  color: #fff;
+}
+
+.user-details input {
+  width: 86%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding-right: 19px;
+  padding-left: 19px;
+}
+
+.gender-details {
+  margin-bottom: 20px;
+  color: #fff;
+  font-weight: bold;
+}
+
+.user-details label {
+  margin-bottom: 20px;
+  color: #fff;
+  font-weight: bold;
+}
+
+.gender-details .category {
+  display: flex;
+  margin-top: 10px;
+}
+.user-details input[type="radio"] {
+  border-color: #fff; /* Set the border color of the radio buttons to white */
+}
+.gender-details .dot {
+  height: 16px;
+  width: 16px;
+  border-radius: 50%;
+  margin-right: 5px;
+}
+
+.gender-details .gender {
+  font-size: 14px;
+}
+
+.button input[type="submit"] {
+  padding: 10px 20px;
+  background-color: #007bff;
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  cursor: pointer;
+  margin-left: 530px;
+}
+
+.button input[type="submit"]:hover {
+  background-color: #0056b3;
+}
+
+
+form {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}

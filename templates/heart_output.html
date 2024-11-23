@@ -1,0 +1,310 @@
+<!doctype html>
+<html class="no-js" lang="zxx">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title> Medical  </title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" type="image/x-icon" href={{ url_for('static', filename='assets/img/favicon.ico' ) }}>
+
+    <!-- CSS here -->
+    <link rel="stylesheet" href={{ url_for('static', filename='assets/css/bootstrap.min.css' ) }}>
+    <link rel="stylesheet" href={{ url_for('static', filename='assets/css/owl.carousel.min.css' ) }}>
+    <link rel="stylesheet" href={{ url_for('static', filename='assets/css/slicknav.css' ) }}>
+    <link rel="stylesheet" href={{ url_for('static', filename='assets/css/animate.min.css' ) }}>
+    <link rel="stylesheet" href={{ url_for('static', filename='assets/css/magnific-popup.css' ) }}>
+    <link rel="stylesheet" href={{ url_for('static', filename='assets/css/fontawesome-all.min.css' ) }}>
+    <link rel="stylesheet" href={{ url_for('static', filename='assets/css/themify-icons.css' ) }}>
+    <link rel="stylesheet" href={{ url_for('static', filename='assets/css/themify-icons.css' ) }}>
+    <link rel="stylesheet" href={{ url_for('static', filename='assets/css/slick.css' ) }}>
+    <link rel="stylesheet" href={{ url_for('static', filename='assets/css/nice-select.css' ) }}>
+    <link rel="stylesheet" href={{ url_for('static', filename='assets/css/style.css' ) }}>
+    <link rel="stylesheet" href={{ url_for('static', filename='assets/css/responsive.css' ) }}>
+    <link rel="stylesheet" href={{ url_for('static', filename='assets/css/form.css' ) }}>
+
+     <!-- Icons font CSS-->
+     <link href={{ url_for('static', filename='vendor/mdi-font/css/material-design-iconic-font.min.css' ) }} rel="stylesheet" media="all">
+     <link href={{ url_for('static', filename='vendor/font-awesome-4.7/css/font-awesome.min.css' ) }} rel="stylesheet" media="all">
+     <!-- Font special for pages-->
+     <link href="https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+ 
+     <!-- Vendor CSS-->
+     <link href={{ url_for('static', filename='vendor/select2/select2.min.css' ) }} rel="stylesheet" media="all">
+     <link href={{ url_for('static', filename='vendor/datepicker/daterangepicker.css') }} rel="stylesheet" media="all">
+ 
+     <!-- Main CSS-->
+     <link href={{ url_for('static', filename='assets/css/form.css') }} rel="stylesheet"  media="all">
+</head>
+<body>
+    <!--? Preloader Start -->
+    <div id="preloader-active">
+        <div class="preloader d-flex align-items-center justify-content-center">
+            <div class="preloader-inner position-relative">
+                <div class="preloader-circle"></div>
+                <div class="preloader-img pere-text">
+                    <img src={{ url_for('static', filename='assets/img/logo/loder.png' ) }}>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Preloader Start -->
+    <header>
+        <!--? Header Start -->
+        <div class="header-area">
+            <div class="main-header header-sticky">
+                <div class="container-fluid">
+                    <div class="row align-items-center">
+                        <!-- Logo -->
+                        <div class="col-xl-2 col-lg-2 col-md-1">
+                            <div class="logo">
+                                <a href="/"><img src={{ url_for('static', filename='assets/img/logo/logo.png' ) }}></a>
+                            </div>
+                        </div>
+                        <div class="col-xl-10 col-lg-10 col-md-10">
+                            <div class="menu-main d-flex align-items-center justify-content-end">
+                                <!-- Main-menu -->
+                                <div class="main-menu f-right d-none d-lg-block">
+                                    <nav>
+                                        <ul id="navigation">
+                                            <li><a href="/">Home</a></li>
+                                            <li><a href="/about">About</a></li>
+                                            <li><a href="/predictor">Predictors</a>
+                                                <ul class="submenu">
+                                                    <li><a href="/heart">Cardiology</a></li>
+                                                    <li><a href="/pneumonia">Respiratory</a></li>
+                                                    <li><a href="/kidney">Renal</a></li>
+                                                    <li><a href="/eye">Retinal</a></li>
+                                                    <li><a href="/liver">Hepatical</a></li>
+                                                </ul>
+                                            </li>
+                                            
+                                            <li><a href="/contact">Contact</a></li>
+                                        </ul>
+                                    </nav>
+                                </div>
+                                <div class="header-right-btn f-right d-none d-lg-block ml-30">
+                                    <a href="/predictor" class="btn header-btn">Predict</a>
+                                </div>
+                            </div>
+                        </div>   
+                        <!-- Mobile Menu -->
+                        <div class="col-12">
+                            <div class="mobile_menu d-block d-lg-none"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Header End -->
+    </header>
+    <main>
+        <!--? Hero Start -->
+        <div class="slider-area2">
+            <div class="slider-height2 d-flex align-items-center">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xl-12">
+                            <div class="hero-cap hero-cap2 text-center">
+                                <h2>{{disease}}</h2>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+              <section>
+            <div class="container">
+                <div class="content">
+                  <form method = "POST" action="/heart">
+                    <div class="user-details">
+                      <div class="input-box">
+                        <span class="details">Full Name</span>
+                        <input type="text" placeholder="Enter your name" name="name" required>
+                      </div>
+                      <div class="input-box">
+                        <span class="details">Age</span><br>
+                        <input type="number" placeholder="Enter your age" name="age" required>
+                      </div>
+                      <div class="input-box">
+                        <!--<span class="details">Gender</span><br>
+                        <input type="text" placeholder="Enter your email" required>-->
+                       
+                            <span class="gender-details">Gender</span><br>
+                            <label for="male"><input type="radio" id="male" name="sex" value="male"> Male </label>
+                            <label for="female"><input type="radio" id="female" name="sex" value="female"> Female</label>
+                            <label for="other"><input type="radio" id="other" name="sex" value="other"> Other</label>
+                        
+                        
+                      </div>
+                      <div class="input-box">
+                        <span class="details">CP</span><br>
+                        <input type="number" placeholder="Enter your cp" name="cp" required>
+                      </div>
+                      <div class="input-box">
+                        <span class="details">trestbps</span>
+                        <input type="number" placeholder="Enter your trestbps " name="trestbps" required>
+                      </div>
+                      <div class="input-box">
+                        <span class="details">Cholestrol</span>
+                        <input type="number" placeholder="Confirm your Cholestrol" name="chol" required>
+                      </div>
+                      <div class="input-box">
+                        <span class="details">FBS</span><br>
+                        <input type="number" placeholder="Enter your FBS" name="fbs" required>
+                      </div>
+                      <div class="input-box">
+                        <span class="details">Restecg</span>
+                        <input type="number" placeholder="Enter your Restecg" name="restecg" required>
+                      </div>
+                      <div class="input-box">
+                        <span class="details">Thalach</span>
+                        <input type="number" placeholder="Enter your Thalach" name="thalach" required>
+                      </div>
+                      <div class="input-box">
+                        <span class="details">Exang</span>
+                        <input type="number" placeholder="Enter your Exang" name="exang" required>
+                      </div>
+                      <div class="input-box">
+                        <span class="details">OldPeak</span>
+                        <input type="number" placeholder="Enter your OldPeak" name="oldpeak" required>
+                      </div>
+                      <div class="input-box">
+                        <span class="details">Slope</span>
+                        <input type="number" placeholder="Enter your slope" name="slope" required>
+                      </div>
+                      <div class="input-box">
+                        <span class="details">CA</span><br>
+                        <input type="number" placeholder="Enter your CA" name="ca" required>
+                      </div>
+                      <div class="input-box">
+                        <span class="details">Thal</span><br>
+                        <input type="number" placeholder="Enter your Thal" name="thal" required>
+                      </div>
+                      <div class="input-box">
+                        <span class="details">Target</span>
+                        <input type="number" placeholder="Enter your Target" name="target" required>
+                      </div>
+                    </div>
+                    <div class="button">
+                      <input type="submit" value="Predict Now">
+                    </div>
+                  </form>
+                </div>
+              </div>
+        </section>
+    </main>
+    <footer>
+        <!--? Footer Start-->
+        <div class="footer-area section-bg" style="data-background:=url({{ url_for('static', filename='assets/img/gallery/footer_bg.jpg') }});">
+            <div class="container">
+                <div class="footer-top footer-padding">
+                    <div class="row d-flex justify-content-between">
+                        <div class="col-xl-3 col-lg-3 col-md-4 col-sm-8">
+                            <div class="single-footer-caption mb-50">
+                                <!-- logo -->
+                                <div class="footer-logo">
+                                    <a href="/"><img src={{ url_for('static', filename='assets/img/logo/logo2_footer.png' ) }}></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-lg-4 col-md-6 col-sm-5">
+                            <div class="single-footer-caption mb-50">
+                                <div class="footer-tittle">
+                                    <h4>About Us</h4>
+                                    <div class="footer-pera">
+                                        <p class="info1">Our sustem offers five specialized predictors for a range of crucial physiological systems and organs - cardiovascular, hepatic, renal, ocular, and respiratory. </p>
+                                        <p class="info1">Each predictor is meticulously designed to provide accurate and timely insights, empowering you to take proactive steps towards better health</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-4 col-lg-4 col-md-6 col-sm-8">
+                            <div class="single-footer-caption mb-50">
+                                <div class="footer-number mb-50">
+                                    <h4><span>+91 </span>8396856205</h4>
+                                    <p>Medical_predictor@gmail.com</p>
+                                </div>
+                                <!-- Form -->
+                                <div class="footer-form">
+                                    <div id="mc_embed_signup">
+                                        <form target="_blank" action="https://spondonit.us12.list-manage.com/subscribe/post?u=1462626880ade1ac87bd9c93a&amp;id=92a4423d01" method="get" class="subscribe_form relative mail_part" novalidate="true">
+                                            <input type="email" name="EMAIL" id="newsletter-form-email" placeholder=" Email Address " class="placeholder hide-on-focus" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Your email address'">
+                                            <div class="form-icon">
+                                                <button type="submit" name="submit" id="newsletter-submit" class="email_icon newsletter-submit button-contactForm">
+                                                    Send
+                                                </button>
+                                            </div>
+                                            <div class="mt-10 info"></div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <div class="row d-flex justify-content-between align-items-center">
+                        <div class="col-xl-9 col-lg-8">
+                            <div class="footer-copy-right">
+                                <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+  Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved 
+  <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-lg-4">
+                            <!-- Footer Social -->
+                            <div class="footer-social f-right">
+                                <a href="#"><i class="fab fa-twitter"></i></a>
+                                <a href="https://www.facebook.com/sai4ull"><i class="fab fa-facebook-f"></i></a>
+                                <a href="#"><i class="fas fa-globe"></i></a>
+                                <a href="#"><i class="fab fa-instagram"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Footer End-->
+    </footer>
+    <!-- Scroll Up -->
+    <div id="back-top" >
+        <a title="Go to Top" href="#"> <i class="fas fa-level-up-alt"></i></a>
+    </div>
+
+    <!-- JS here -->
+	
+    <script src={{ url_for('static', filename='./assets/js/vendor/modernizr-3.5.0.min.js' ) }}></script>
+    <!-- Jquery, Popper, Bootstrap -->
+    <script src={{ url_for('static', filename='./assets/js/vendor/jquery-1.12.4.min.js' ) }}></script>
+    <script src={{ url_for('static', filename='./assets/js/popper.min.js' ) }}></script>
+    <script src={{ url_for('static', filename='./assets/js/bootstrap.min.js' ) }}></script>
+    <!-- Jquery Mobile Menu -->
+    <script src={{ url_for('static', filename='./assets/js/jquery.slicknav.min.js' ) }}></script>
+
+    <!-- Jquery Slick , Owl-Carousel Plugins -->
+    <script src={{ url_for('static', filename='./assets/js/owl.carousel.min.js' ) }}></script>
+    <script src={{ url_for('static', filename='./assets/js/slick.min.js' ) }}></script>
+    <!-- One Page, Animated-HeadLin -->
+    <script src={{ url_for('static', filename='./assets/js/wow.min.js' ) }}></script>
+    <script src={{ url_for('static', filename='./assets/js/animated.headline.js' ) }}></script>
+    
+    <!-- Nice-select, sticky -->
+    <script src={{ url_for('static', filename='./assets/js/jquery.nice-select.min.js' ) }}></script>
+    <script src={{ url_for('static', filename='./assets/js/jquery.sticky.js' ) }}></script>
+    <script src={{ url_for('static', filename='./assets/js/jquery.magnific-popup.js' ) }}></script>
+
+    <!-- contact js -->
+    <script src={{ url_for('static', filename='./assets/js/contact.js' ) }}></script>
+    <script src={{ url_for('static', filename='./assets/js/jquery.form.js' ) }}></script>
+    <script src={{ url_for('static', filename='./assets/js/jquery.validate.min.js' ) }}></script>
+    <script src={{ url_for('static', filename='./assets/js/mail-script.js' ) }}></script>
+    <script src={{ url_for('static', filename='./assets/js/jquery.ajaxchimp.min.js' ) }}></script>
+    
+    <!-- Jquery Plugins, main Jquery -->	
+    <script src={{ url_for('static', filename='./assets/js/plugins.js' ) }}></script>
+    <script src={{ url_for('static', filename='./assets/js/main.js' ) }}></script>
+    
+    </body>
+</html>
+    
